@@ -2,12 +2,22 @@ public class Nonograms {
 	
 	//정답 판
 	static boolean[][] answer_board = new boolean[10][10];
+	static int[][] initialBoard = new int[10][10];
     public static void main(String[] args) {
         System.out.println("hi");
-        
+
+		// 초기판 출력
+		for(int i = 0; i<10; i++) {
+			for(int j = 0; j<10; j++) {
+				System.out.print(initialBoard[i][j]+" ");
+			}
+			System.out.println();
+		}
+
         //정답 판 칠하기 
         get_answer_color(answer_board);
-        
+
+
         /*
         for(int i = 0; i<10; i++) {
         	for(int j = 0; j<10; j++) {
