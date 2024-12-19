@@ -47,6 +47,45 @@ public class Nonograms {
         	
         }
     }
+
+	//4.
+	private static boolean isCorrect(int[][] initialBoard, int[][] answer_board) {
+		for(int i = 0; i<10; i++) {
+			for(int j = 0; j<10; j++) {
+				if(initialBoard[i][j] != answer_board[i][j])return false;
+			}
+		}
+		return true;
+	}
+
+
+
+
+
+
+
+	private static void print(int[][] initialBoard) {
+		for(int i = 0; i<10; i++) {
+			for(int j = 0; j<10; j++) {
+				System.out.print(initialBoard[i][j]+" ");
+			}
+			System.out.println();
+		}
+
+	}
+
+
+
+
+
+
+	//3.
+	private static boolean validate(int x, int y, int[][] answer_board) {
+		if(answer_board[x][y] == 1) {
+			return true;
+		}
+		else return false;
+	}
     
     
    
